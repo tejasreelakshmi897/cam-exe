@@ -83,7 +83,15 @@ function App() {
 
           <a href="#editor">EDITOR</a>
 
-          <a href="#shutter">SHUTTER</a>
+          <a
+            href="#shutter"
+            onClick={(e) => {
+              e.preventDefault();
+              openShutter();
+            }}
+          >
+            SHUTTER
+          </a>
 
         </div>
 
@@ -286,95 +294,6 @@ function App() {
         >
           OPEN GALLERY EDITOR
         </button>
-
-      </section>
-
-      {/* SHUTTER VIDEO SECTION */}
-
-      <section
-        className="home-shutter-section"
-        id="shutter"
-      >
-
-        <div className="home-shutter-content">
-
-          <p className="eyebrow">
-            LIFE IN MOTION / CAM_006
-          </p>
-
-          <h2>
-            SOME MOMENTS
-            <br />
-            DESERVE TO <span>MOVE.</span>
-          </h2>
-
-          <p>
-            Morning sunlight, golden afternoons,
-            quiet evenings and midnight memories.
-            Turn everyday life into your own
-            little cinematic masterpiece.
-          </p>
-
-          <div className="home-shutter-tags">
-
-            <span>AUTO LIGHT</span>
-
-            <span>DAYLIGHT</span>
-
-            <span>LOW LIGHT</span>
-
-            <span>CINEMATIC FILTERS</span>
-
-          </div>
-
-          <button
-            className="primary-button"
-            onClick={openShutter}
-          >
-            OPEN SHUTTER VIDEO
-          </button>
-
-        </div>
-
-        <div className="home-shutter-camera">
-
-          <div className="home-shutter-top">
-
-            <span>CAM_006</span>
-
-            <span>● REC</span>
-
-          </div>
-
-          <div className="home-shutter-screen">
-
-            <div className="home-shutter-screen-content">
-
-              <p>YOUR LIFE, YOUR LITTLE MOVIE</p>
-
-              <h3>ROLL CAMERA.</h3>
-
-              <button
-                className="home-record-button"
-                onClick={openShutter}
-                aria-label="Open video studio"
-              >
-                <span />
-              </button>
-
-            </div>
-
-          </div>
-
-          <div className="home-shutter-bottom">
-
-            <span>HD / 30 FPS</span>
-
-            <span>DAY TO NIGHT</span>
-
-          </div>
-
-        </div>
 
       </section>
 
