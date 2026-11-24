@@ -1,0 +1,383 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap");
+
+.booth-page {
+  min-height: 100vh;
+  background: #f5f0e8;
+  color: #292521;
+  font-family: "DM Sans", sans-serif;
+  padding-bottom: 80px;
+}
+
+.booth-page * {
+  box-sizing: border-box;
+}
+
+.booth-page button {
+  cursor: pointer;
+}
+
+.booth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 6%;
+  border-bottom: 1px solid #d8cec4;
+}
+
+.booth-header h2 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.booth-header h2 span {
+  color: #cf8e91;
+}
+
+.booth-header button {
+  background: transparent;
+  border: 1px solid #b9aaa0;
+  padding: 12px 20px;
+  color: inherit;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.booth-header > span {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.booth-container {
+  width: min(1200px, 92%);
+  margin: 55px auto;
+}
+
+.booth-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.booth-heading > p:first-child,
+.booth-eyebrow {
+  color: #c28a8c;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.booth-heading h1 {
+  margin: 15px 0;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 500;
+}
+
+.booth-heading > p:last-child {
+  color: #75685e;
+  font-size: 14px;
+}
+
+.booth-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+  gap: 45px;
+  align-items: start;
+}
+
+.booth-camera-card {
+  min-width: 0;
+  padding: 22px;
+  background: #fffaf3;
+  border: 1px solid #dfd5cb;
+  border-radius: 8px;
+  box-shadow: 0 15px 45px rgba(63, 44, 35, 0.07);
+}
+
+.booth-camera-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  color: #75685e;
+}
+
+.booth-viewfinder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #292321;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.booth-viewfinder video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.booth-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: #f8eee6;
+  background: radial-gradient(
+    circle,
+    #51433f 0%,
+    #292321 75%
+  );
+}
+
+.booth-placeholder h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 50px);
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.booth-placeholder p {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.booth-placeholder button,
+.booth-camera-actions button,
+.booth-download {
+  background: #d99a9a;
+  color: #292521;
+  border: 1px solid #d99a9a;
+  border-radius: 3px;
+  padding: 14px 24px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.booth-countdown {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 100px;
+}
+
+.booth-camera-actions {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 10px;
+}
+
+.booth-camera-actions button:disabled,
+.booth-download:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.booth-tip {
+  text-align: center;
+  color: #8c7e74;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.booth-error {
+  text-align: center;
+  color: #b34f58;
+  font-size: 12px;
+}
+
+.booth-editor {
+  text-align: center;
+}
+
+.booth-editor h2 {
+  margin: 12px 0 25px;
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.booth-strip {
+  width: min(100%, 250px);
+  margin: 0 auto 30px;
+  padding: 15px 15px 25px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+}
+
+.booth-strip-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(100, 100, 100, 0.2);
+  overflow: hidden;
+}
+
+.booth-strip-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booth-strip-photo span {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  opacity: 0.5;
+}
+
+.booth-strip-caption {
+  margin-top: 20px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  overflow-wrap: anywhere;
+}
+
+.booth-strip-brand {
+  margin-top: 15px;
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  opacity: 0.65;
+}
+
+.booth-editor h3 {
+  margin: 30px 0 15px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.booth-frame-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.booth-frame-options button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid #c7b9ae;
+  border-radius: 5px;
+  color: #4c423c;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+}
+
+.booth-frame-options button.active {
+  border: 2px solid #d99a9a;
+}
+
+.booth-frame-options button span {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+.booth-caption-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.booth-caption-label input {
+  width: 100%;
+  padding: 13px;
+  background: #fffaf3;
+  border: 1px solid #c7b9ae;
+  border-radius: 4px;
+  color: #292521;
+  font-size: 13px;
+}
+
+.booth-download {
+  width: 100%;
+}
+
+.booth-retake {
+  width: 100%;
+  margin-top: 12px;
+  padding: 13px;
+  background: transparent;
+  border: 1px solid #b9aaa0;
+  border-radius: 3px;
+  color: #292521;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+@media (max-width: 850px) {
+  .booth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booth-container {
+    width: min(680px, 94%);
+    margin: 35px auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .booth-header {
+    padding: 18px 4%;
+  }
+
+  .booth-header h2 {
+    font-size: 18px;
+  }
+
+  .booth-header button {
+    padding: 9px 10px;
+    font-size: 9px;
+  }
+
+  .booth-header > span {
+    font-size: 8px;
+  }
+
+  .booth-camera-card {
+    padding: 13px;
+  }
+
+  .booth-heading h1 {
+    font-size: 39px;
+  }
+
+  .booth-countdown {
+    font-size: 75px;
+  }
+}

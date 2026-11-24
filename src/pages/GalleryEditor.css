@@ -1,0 +1,510 @@
+
+.gallery-page {
+  min-height: 100vh;
+  background: #f5f0e8;
+  color: #292521;
+  font-family: "DM Sans", sans-serif;
+}
+
+.gallery-page * {
+  box-sizing: border-box;
+}
+
+.gallery-page button {
+  cursor: pointer;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 6%;
+  border-bottom: 1px solid #d8cec4;
+}
+
+.gallery-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  margin: 0;
+}
+
+.gallery-header h2 span {
+  color: #cf8e91;
+}
+
+.gallery-header button {
+  background: transparent;
+  border: 1px solid #b9aaa0;
+  padding: 12px 20px;
+  color: inherit;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.gallery-header > span {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.gallery-container {
+  width: min(1250px, 92%);
+  margin: 55px auto;
+}
+
+.gallery-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.gallery-heading > p:first-child,
+.gallery-eyebrow {
+  color: #c28a8c;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.gallery-heading h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.gallery-heading > p:last-child {
+  color: #75685e;
+  font-size: 14px;
+}
+
+.gallery-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+  gap: 35px;
+  align-items: start;
+}
+
+.gallery-preview-panel {
+  min-width: 0;
+  background: #fffaf3;
+  padding: 22px;
+  border: 1px solid #dfd5cb;
+  border-radius: 8px;
+}
+
+.gallery-upload {
+  min-height: 420px;
+  background: #292321;
+  color: #f8eee6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.gallery-upload-icon {
+  font-size: 55px;
+  font-weight: 300;
+  color: #d99a9a;
+}
+
+.gallery-upload h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.gallery-upload p {
+  font-size: 13px;
+  color: #cbbeb3;
+  margin-bottom: 25px;
+}
+
+.gallery-upload button,
+.gallery-photo-actions button:last-child {
+  padding: 14px 25px;
+  background: #d99a9a;
+  color: #292521;
+  border: 1px solid #d99a9a;
+  border-radius: 3px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.gallery-photo-preview {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #292321;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gallery-photo-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.gallery-photo-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery-photo-actions button {
+  padding: 14px 22px;
+  background: transparent;
+  border: 1px solid #b9aaa0;
+  border-radius: 3px;
+  color: #292521;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.gallery-controls {
+  padding: 20px;
+}
+
+.gallery-controls h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 37px;
+  font-weight: 500;
+  margin: 12px 0 30px;
+}
+
+.gallery-control-section {
+  border-top: 1px solid #d8cec4;
+  padding: 25px 0;
+}
+
+.gallery-control-section h3 {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 0 20px;
+}
+
+.gallery-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 230px;
+  overflow-y: auto;
+}
+
+.gallery-filter-list button {
+  padding: 10px 13px;
+  border: 1px solid #c7b9ae;
+  border-radius: 3px;
+  background: transparent;
+  color: #4c423c;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+}
+
+.gallery-filter-list button.active {
+  background: #d99a9a;
+  border-color: #d99a9a;
+  color: #292521;
+}
+
+.gallery-slider {
+  display: block;
+  margin-bottom: 22px;
+}
+
+.gallery-slider span {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.gallery-slider input {
+  width: 100%;
+  accent-color: #d99a9a;
+}
+
+.gallery-reset {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  border: 1px solid #b9aaa0;
+  border-radius: 3px;
+  color: #292521;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+@media (max-width: 850px) {
+  .gallery-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-container {
+    margin: 35px auto;
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery-header {
+    padding: 18px 4%;
+  }
+
+  .gallery-header h2 {
+    font-size: 18px;
+  }
+
+  .gallery-header button {
+    padding: 9px 10px;
+    font-size: 9px;
+  }
+
+  .gallery-header > span {
+    font-size: 9px;
+  }
+
+  .gallery-heading h1 {
+    font-size: 35px;
+  }
+
+  .gallery-preview-panel {
+    padding: 12px;
+  }
+
+  .gallery-upload {
+    min-height: 340px;
+  }
+
+  .gallery-controls {
+    padding: 10px;
+  }
+}
+
+/* =========================
+   GALLERY PHOTO / POLAROID
+========================= */
+
+.gallery-mode-switch {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 35px;
+}
+
+.gallery-mode-switch button {
+  padding: 12px 28px;
+  background: transparent;
+  color: #4c423c;
+  border: 1px solid #c4b5aa;
+  border-radius: 30px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gallery-mode-switch button.active {
+  background: #d99a9a;
+  border-color: #d99a9a;
+  color: #292521;
+}
+
+.gallery-mode-switch button:hover {
+  border-color: #d99a9a;
+}
+
+/* POLAROID STAGE */
+
+.gallery-polaroid-stage {
+  min-height: 520px;
+  padding: 35px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #292321;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gallery-polaroid {
+  width: min(100%, 360px);
+  padding: 17px 17px 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transform: rotate(-2deg);
+  transition: background 0.2s;
+}
+
+.gallery-polaroid-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #d7c7b7;
+}
+
+.gallery-polaroid-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-polaroid-caption {
+  margin-top: 25px;
+  padding: 0 5px;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.gallery-polaroid-date {
+  margin-top: 12px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* FRAME OPTIONS */
+
+.gallery-field-label {
+  margin: 0 0 14px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #75685e;
+}
+
+.gallery-frame-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.gallery-frame-options button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  padding: 12px;
+  background: transparent;
+  color: #4c423c;
+  border: 1px solid #c7b9ae;
+  border-radius: 5px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.gallery-frame-options button.active {
+  border: 2px solid #d99a9a;
+}
+
+.gallery-frame-swatch {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #b7a89d;
+  border-radius: 3px;
+}
+
+/* CAPTION AND DATE */
+
+.gallery-text-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #75685e;
+}
+
+.gallery-text-field input {
+  width: 100%;
+  padding: 13px;
+  background: #fffaf3;
+  color: #292521;
+  border: 1px solid #c7b9ae;
+  border-radius: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  outline: none;
+}
+
+.gallery-text-field input:focus {
+  border-color: #d99a9a;
+}
+
+.gallery-date-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  color: #75685e;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.gallery-date-toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: #d99a9a;
+}
+
+.gallery-error {
+  margin: 15px 0;
+  color: #b34f58;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  .gallery-mode-switch {
+    margin-bottom: 25px;
+  }
+
+  .gallery-mode-switch button {
+    padding: 11px 20px;
+  }
+
+  .gallery-polaroid-stage {
+    min-height: 400px;
+    padding: 30px 12px;
+  }
+
+  .gallery-polaroid {
+    width: min(100%, 290px);
+    padding: 13px 13px 28px;
+  }
+
+  .gallery-polaroid-caption {
+    font-size: 17px;
+  }
+
+  .gallery-frame-options button {
+    padding: 10px;
+    font-size: 9px;
+  }
+}
